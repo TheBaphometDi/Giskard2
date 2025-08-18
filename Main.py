@@ -5,12 +5,7 @@ from dataset import create_dataset
 def main():
     
     config = Config()
-    config.create_directories()
     
-    print(f"\nCreated directories:")
-    print(f"  - Data: {config.get_data_path()}")
-    print(f"  - Datasets: {config.get_dataset_path()}")
-
     print("\nCreating dataset...")
     dataset = create_dataset(
         data=pd.DataFrame({'col1': [1]}),
