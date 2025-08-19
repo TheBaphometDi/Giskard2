@@ -7,12 +7,15 @@ def main():
     config = Config()
     
     print("\nCreating dataset...")
+    with open("master_margarita_excerpt.txt", "r", encoding="utf-8") as f:
+        text = f.read().strip()
+    
+    df = pd.DataFrame({
+        'text': [text]
+    })
+    
     dataset = create_dataset(
-        data=pd.DataFrame({
-            'text': ['Пример текста 1', 'Пример текста 2', 'Пример текста 3'],
-            'value': [10, 20, 30],
-            'category': ['A', 'B', 'A']
-        }),
+        data=df,
         name=config.dataset_config["name"],
         target_column=config.dataset_config["target_column"],
         categorical_columns=config.dataset_config["categorical_columns"]
