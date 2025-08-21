@@ -8,9 +8,7 @@ class Config:
 
         self.dataset_config = {
             "name": "my_dataset",
-            "target_column": None,
-            "categorical_columns": [],
-            "file_path": "master_margarita_excerpt.txt"  # Добавляем путь к файлу
+            "file_path": "master_margarita_excerpt.txt"
         }
 
     def load_text_data(self):

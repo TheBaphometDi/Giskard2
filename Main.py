@@ -10,10 +10,7 @@ def main():
     df = prepare_data(text)
 
     dataset = create_dataset(
-        data=df,
-        name=config.dataset_config["name"],
-        target_column=config.dataset_config["target_column"],
-        categorical_columns=config.dataset_config["categorical_columns"]
+        data=df
     )
 
     print("✓ Dataset created successfully")
