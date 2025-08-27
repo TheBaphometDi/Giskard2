@@ -3,7 +3,6 @@ from dataset import create_dataset, prepare_data, load_text_data
 
 
 def main():
-    config = Config()
 
     print("\nCreating dataset...")
     text = load_text_data()
