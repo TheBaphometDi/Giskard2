@@ -1,12 +1,12 @@
 from config import Config
-from dataset import create_dataset, prepare_data
+from dataset import create_dataset, prepare_data, load_text_data
 
 
 def main():
     config = Config()
 
     print("\nCreating dataset...")
-    text = config.load_text_data()
+    text = load_text_data()
     df = prepare_data(text)
 
     dataset = create_dataset(
